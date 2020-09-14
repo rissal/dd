@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+
+<section class="single-image">
+    <div class="container-fluid mt-5 pt-5 text-center d-flex justify-content-center align-items-center">
+        <div style="width: 50%;">
+            <img class="img-thumbnail" src=<%= image.src %>>
+            <h3 class="font-weight-bold mt-3 mb-4 name"><%= image.name %></h3>
+            <p class="lead description"><%= image.description %></p>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer'); -%>
