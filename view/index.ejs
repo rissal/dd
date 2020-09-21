@@ -5,17 +5,17 @@
   <div class="container-fluid ">
     <h1 class="font-weight-bold text-white">Hello there!<i class="text-danger fas fa-heart"></i></h1>
     <h3>Welcome to my website!</h3>
-    <p class="mt-5 lead">On this website, i will showcase everything about me, especially my artwork!</p>
+    <p class="mt-5 lead">On this website, I will showcase everything about me, counting my artwork!</p>
   </div>
 </header>
 
 <!-- Header ends -->
 <!-- About me -->
-<section class="about">
+<section class="about height">
   <div class="container-fluid">
     <h2 class="mt-4 mb-5">About Me <i class="fas fa-question-circle"></i></h2>
     <div class="row text-center mt-2 mb-5">
-      <div class="col-sm-6 col-md-3 left-b" id="left">
+      <div class="col-sm-6 col-md-3 left-b" id="leftMe">
         <div class="card">
           <div class="card-body p-0">
             <img src="img/me.jpg" alt="me" width="100%">
@@ -25,22 +25,22 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-9 mt-5 pt-5 right-b" id="right">
+      <div class="col-sm-6 col-md-9 mt-5 pt-5 right-b" id="rightMe">
         <div class="row">
           <div class="col-4">
             <i class="fas fa-graduation-cap fa-3x text-danger"></i>
             <h5 class="my-3">Studies</h5>
-            <p class="text-muted">I am a first year computer science student, and a web enthusiast!</p>
+            <p class="text-muted">I am a first year computer science student, and a web enthusiast.</p>
           </div>
           <div class="col-4">
             <i class="fab fa-adobe fa-3x text-primary"></i>
             <h5 class="my-3">Art</h5>
-            <p class="text-muted">I am a self-taught Photoshop artist, and i do some cool stuff with it!</p>
+            <p class="text-muted">I am a self-taught Photoshop artist, and i do some cool stuff with it.</p>
           </div>
           <div class="col-4">
             <i class="fas fa-bicycle fa-3x text-warning"></i>
             <h5 class="my-3">Cycling</h5>
-            <p class="text-muted">And as you might have noticed, cycling is one of my passions too!</p>
+            <p class="text-muted">And as you might have noticed, cycling is one of my passions too.</p>
           </div>
         </div>
       </div>
@@ -49,17 +49,61 @@
   </div>
 </section>
 <!-- My Art -->
-<section class="bg-primary">
-  <div class="container-fluid`">
-    <h2 class="pt-4 mb-2 text-white">My Art <i class="fas fa-palette"></i></h2>
-    <p class="lead text-white mb-5">This is a collection of my favorite artworks!</p>
-    <div class="content p-5">
-      <% images.map(function(image){ %>
-        <% var href = "/images/"+image.id %>
-        <a href=<%= href %> ><img src=<%= image.src %> alt=<%= image.src %> class="img-thumbnail img-shadow"/></a>
-      <% }) %>
+
+
+<section class="bg-primary pt-4 height">
+  <div class="container-fluid px-5">
+    <h2 class="text-white pb-5 mb-0">My Art <i class="text-warning fas fa-palette"></i></h2>
+    
+    <div class="row pb-5">
+      <div id="leftPh" class="left-b col-lg-7 d-flex flex-column justify-content-center">
+        <p class="text-white mb-3 h4">I use <a class="text-white font-weight-bold" target="_blank" href="https://www.photopea.com/">Photopea</a> to do my artwork, It's a very good free alternative to Photoshop.</p>
+        <P class="bg-dark rounded p-4 lead text-light mb-3">If you're used to working with Photoshop, Photopea will be a piece of cake for you. The major differences might be some shortcuts, the fact that it downloads a psd file on your computer instead of saving it like Photoshop, and the occasional crash because it's working on a browser after all. <a href="/images-collection" class=" btn btn-primary btn-block mt-3 check-my-art-btn">Check out my art!</a></P>
+      </div>
+      <div id="rightPh" class="right-b col-lg-5">
+        <a target="_blank" href="https://www.photopea.com/">
+          <img width="100%" class="rounded" src="/img/photopea.png" alt="photopea">
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
-<!-- My Art ends-->
+
+<!-- My Art ends -->
+
+<!-- Instagram starts -->
+<section class="height">
+  <div class="container-fluid">
+    <h2 class="pt-4 mb-2 text-dark">My Writings <i class="text-danger fas fa-pen-fancy"></i></h2>
+    <p class="lead text-dark mb-5">This is a collection of my favorite writings.</p>
+    <div class="row">
+      
+      <div class="col-lg-4 col-sm-6 mb-2">
+        <%- html1 %>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-2">
+        <%- html2 %>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-2">
+        <%- html3 %>
+      </div>
+    </div>
+    <a target="_blank" href="https://www.instagram.com/rissalhedna/" class="btn font-weight-bold px-5 btn-danger my-5">Check out my Instagram for more!</a>
+  </div>
+</section>
+<!-- Instagram ends -->
+<!-- Contacts -->
+<footer class="bg-dark contact">
+  <div class="container-fluid pb-3">
+    <h2 class="pt-4 mb-2 text-white">Contact Me <i class="fas fa-hashtag"></i></h2>
+    <p class="lead text-white mb-5">You can contact me through these social media links.</p>
+    <a href="https://www.instagram.com/rissalhedna/" class="mr-3"><i class="h3 fab fa-instagram text-danger"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100003912121598" class="mr-3"><i class="h3 fab fa-facebook-f text-primary"></i></a>
+    <a href="https://www.linkedin.com/in/mohamed-rissal-hedna-949486121/"><i class="h3 fab fa-linkedin-in text-info"></i></a>
+  </div>
+</footer>
+
+<!-- Contacts end -->
+
   <%- include('partials/footer'); -%>
