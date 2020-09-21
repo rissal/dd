@@ -96,5 +96,5 @@ app.get("/images-collection",function(req,res){
 })
 
 app.listen(process.env.PORT||3000,function(){
-    console.log('connected on port 3000')
+    console.log(`connected on port ${process.env.PORT}`)
 })
