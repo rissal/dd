@@ -1,6 +1,8 @@
 const dotenv = require('dotenv').config()
 const fetch = require('node-fetch');
 const express = require('express')
+var favicon = require('serve-favicon')
+var path = require('path')
 const ejs = require('ejs')
 const bodyParser = require('body-parser')
 const https = require('https')
@@ -34,6 +36,7 @@ const sources = [
 ]
 
 const app = express();
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 app.set('view engine', 'ejs');
 
